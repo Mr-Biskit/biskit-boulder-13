@@ -16,7 +16,7 @@ const BouncingDotsLoader = () => {
 
 const Load = ({}) => {
   const { RiveComponent: RiveComponentPlayback } = useRive({
-    src: "/assets/Sandal.riv",
+    src: "/assets/sandal.riv",
     stateMachines: "State Machine 1",
     autoplay: true,
   });
