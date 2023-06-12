@@ -1,12 +1,17 @@
 "use client";
 import AnimatedTextCharacter from "@/components/UI/AnimatedCharacter";
-import { useRive, Layout, Fit, Alignment } from "@rive-app/react-canvas";
+import {
+  useRive,
+  Layout,
+  useStateMachineInput,
+  Alignment,
+} from "@rive-app/react-canvas";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 export default function Page() {
   const router = useRouter();
-  const { RiveComponent: RiveComponentPlayback } = useRive({
+  const { rive, RiveComponent: RiveComponentPlayback } = useRive({
     src: "/assets/MoonButton.riv",
     stateMachines: "State Machine 1",
     autoplay: true,
@@ -15,8 +20,12 @@ export default function Page() {
     }),
   });
 
+  const clickInput = useStateMachineInput(rive, "State Machine 1", "Clicked");
+
   const handleClick = () => {
+    clickInput!.fire();
     router.push("/boulder");
+    console.log("clicked");
   };
 
   return (
@@ -46,9 +55,8 @@ export default function Page() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3, duration: 4 }}
-        onClick={handleClick}
       >
-        <RiveComponentPlayback />
+        <RiveComponentPlayback onTouchStart={handleClick} />
       </motion.div>
     </div>
   );

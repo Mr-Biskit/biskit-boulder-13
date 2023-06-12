@@ -115,3 +115,32 @@
 .better::first-letter {
   initial-letter: 2;
 }
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ticker {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.ticker__items {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
+
+.ticker__item {
+  margin-right: 50px;
+}

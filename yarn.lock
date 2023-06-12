@@ -214,6 +214,11 @@
   resolved "https://registry.yarnpkg.com/@rive-app/canvas/-/canvas-1.1.9.tgz#39777c22e95ac2c4ce295e0a79c3230893cf74d7"
   integrity sha512-PsHDCtte999FToHb6H1+0sU+DYZEDU8Ph6m1qZcIM8d5a9NQtH9ic71rFJvzeI4de5ET/kzj0V/JUaSo16DMrg==
 
+"@rive-app/canvas@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@rive-app/canvas/-/canvas-1.2.0.tgz#246219f3d25bc6b54416d118207a095ccd12cfcf"
+  integrity sha512-Wm6bQiE9F5+vE9R/zTnGOH3yNM8Dim+81dI2MWeuOFJ2mmdKWgsFir1tdHFjmndESNKySO7cFs8xZ4TVLERWlQ==
+
 "@rive-app/react-canvas@^3.0.51":
   version "3.0.51"
   resolved "https://registry.yarnpkg.com/@rive-app/react-canvas/-/react-canvas-3.0.51.tgz#8b7090af80388d1b5c3b9c5e89dd1374eda63c24"
@@ -2131,7 +2136,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.8.1:
+prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2167,6 +2172,13 @@ react-merge-refs@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-2.0.2.tgz#73f576111124897dec4ea56035a97e199e8cb377"
   integrity sha512-V5BGTwGa2r+/t0A/BZMS6L7VPXY0CU8xtAhkT3XUoI1WJJhhtvulvoiZkJ5Jt9YAW23m4xFWmhQ+C5HwjtTFhQ==
+
+react-social-icons@^5.15.0:
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-5.15.0.tgz#6b815aab9eff210e1f6e8a4ca420684aa72c154a"
+  integrity sha512-khfDgUiUwEBe34T6br2+mkXQg3hLVDdviVjexxZoVCsogMgxTy/m8+KlX/j6Wa7P2BPxgZ7yZ2jXw3X06pUUFQ==
+  dependencies:
+    prop-types "^15.7.2"
 
 react@18.2.0:
   version "18.2.0"

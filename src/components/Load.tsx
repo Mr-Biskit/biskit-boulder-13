@@ -1,7 +1,6 @@
 "use client";
 
-import { FC } from "react";
-import { useRive } from "@rive-app/react-canvas";
+import { useRive, RuntimeLoader } from "@rive-app/react-canvas";
 import { useState, useEffect } from "react";
 
 const BouncingDotsLoader = () => {

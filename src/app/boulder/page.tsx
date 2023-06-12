@@ -3,6 +3,7 @@ import React, { Suspense, useState, useEffect, useRef } from "react";
 
 import Load from "@/components/Load";
 import AboutMe from "@/components/AboutMe";
+import Projects from "@/components/Projects";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
@@ -81,6 +82,9 @@ const Home = () => {
             onLoad={onLoad}
           />
           {showAboutMe && <AboutMe triggerAnimation={triggerAboutSection} />}
+          {showProjects && (
+            <Projects triggerAnimation={triggerProjectSection} />
+          )}
         </>
       ) : (
         <Load />
