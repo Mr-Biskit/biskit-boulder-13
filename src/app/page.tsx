@@ -56,7 +56,10 @@ export default function Page() {
         animate={{ opacity: 1 }}
         transition={{ delay: 3, duration: 4 }}
       >
-        <RiveComponentPlayback onTouchStart={handleClick} />
+        <RiveComponentPlayback
+          onTouchStart={handleClick}
+          onClick={handleClick}
+        />
       </motion.div>
     </div>
   );

@@ -3,16 +3,21 @@ import {
   ArrowUturnRightIcon,
   ArrowUturnLeftIcon,
 } from "@heroicons/react/24/solid";
+import { StateMachineInput } from "@rive-app/react-canvas";
 
 interface FlipCardProps {
   front: React.ReactNode;
   back: React.ReactNode;
+  clickAnimation?: StateMachineInput;
 }
 
-const FlipCard: React.FC<FlipCardProps> = ({ front, back }) => {
+const FlipCard: React.FC<FlipCardProps> = ({ front, back, clickAnimation }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = () => {
+    if (clickAnimation) {
+      clickAnimation.fire();
+    }
     setIsFlipped(!isFlipped);
   };
 

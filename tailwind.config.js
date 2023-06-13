@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        base: ["13px", "18px"],
+      },
       fontFamily: {
         heading: ["Heading"],
       },

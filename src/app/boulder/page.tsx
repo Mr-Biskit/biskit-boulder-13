@@ -33,7 +33,7 @@ const Home = () => {
     // After 15 seconds, set showSpline to true
     const timer = setTimeout(() => {
       setShowSpline(true);
-    }, 15000);
+    }, 1000);
 
     // Clear the timeout if the component is unmounted before the 15 seconds are up
     return () => clearTimeout(timer);
