@@ -1,28 +1,10 @@
 export const mystory = {
-  start: "",
-  main: `Hi, I'm Gabriel
-    
-    I began my coding journey 5 years ago and for the last 2 have been comitted myself to learning blockchain technologies.
-    
-    I have considerable experience with React, Typescript and multiple databases, which has become my stack of choice for most web applications.
-
-    I also have experience with solidity and have deployed dozens of smart contracts fpr ethereum/polygon.
-
-    I was born in Johannesburg and started my career in corporate being both an anlyst and manager, I moved to Europe when I was 23 and have been living in Amsterdam for the last 5 years and it has been the city where my love for coding blossomed.
-
-    Through my career I have dabbled with several avenues of programming including data gathering, data science, and automation, though nothing has satisfied me quite like designing, developing and deploying web applications.
-
-    Socrates emphasized the need for critical self-examination and the pursuit of knowledge. This is how I approach my life and my work, I am always looking to improve and challenge myself.
-    `,
-  mobile: `
-    
-    Began my coding journey 5 years ago and for the last 2 have been comitted myself to learning blockchain technologies.
-    
-    I have considerable experience with React, Typescript and multiple databases, which has become my stack of choice for most web applications.
-
-    I also have experience with solidity and have deployed dozens of smart contracts for ethereum/polygon.
-    
-    `,
+  description: [
+    "My journey into the realm of coding has been quite the unconventional tale. I graduated from university in 2016 with a degree in Project Management, and soon thereafter, I embarked on a career as a junior analyst. Before long, I found myself managing a restaurant franchise. Though I found fulfillment in my business ventures, I couldn't shake the nagging desire to engage both the analytical and creative sides of my brain. This quest for a harmonious blend of logic and creativity led me to a Python-based course in 2019. The course was challenging, but as I began to understand the principles of high-level programming, my mind was ignited with the potential of what I could create. I was reminded of the words of Socrates who emphasized the importance of critical self-examination and the pursuit of knowledge. With these words at heart, I delved into a rigorous self-study of low-level programming concepts, such as Data Structures and Algorithms. A year later, my ambition had crystallized into a simple mantra: `I want to build cool shit that brings value to people.` This motivation steered me towards JavaScript, and later TypeScript, the lingua franca of modern web applications...",
+    "As I grappled with new concepts daily and maintained a steady learning curve, I became proficient in frameworks and practices such as React, RESTful APIs, and UI/UX. Then, in 2020, I was introduced to blockchain technology. I was captivated by its potential to truly create a decentralized internet. This newfound fascination spurred me into writing my first smart contracts, and a new passion was kindled. My thirst for understanding only grew from there, leading me into an intensive study of Cryptography and Blockchain infrastructure. As a full-stack developer, I have found the ideal playground to nurture both my analytical and scientific left brain, along with my creative and imaginative right brain. This balance makes the role a perfect fit for me. Combining this with my strong organizational skills, my drive to initiate and complete projects, and my ability to collaborate effectively as a team player, I am confident that I am a formidable force as a developer. I am reminded of Aristotle's words, which serve as a fitting conclusion to my narrative: `All men by nature desire knowledge.`",
+  ],
+  imagePath1: "/images/HelmetEdit.png",
+  imagePath2: "/images/scrollFinal.png",
 };
 
 export const projects = [

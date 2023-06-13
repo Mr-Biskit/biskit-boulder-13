@@ -8,10 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        base: ["13px", "18px"],
+        std: ["13px", "18px"],
+        mbl: ["8px", "12px"],
       },
       fontFamily: {
         heading: ["Heading"],
+        std: ["Base"],
+        sig: ["Signature"],
       },
       transform: ["hover", "focus", "active", "group-hover"],
       perspective: { none: "none", 1000: "1000px" },

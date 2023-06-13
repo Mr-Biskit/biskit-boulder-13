@@ -36,21 +36,23 @@ const Projects: React.FC<ProjectsProps> = ({ triggerAnimation }) => {
       imagePath: project.imagePath,
       flipCardFront: (
         <div className="p-1 justify-center items-center space-y-1">
-          <h2 className="text-2xl font-heading text-right lg:text-left lg:text-4xl ">
+          <h2 className="text-2xl font-heading text-right lg:text-left lg:text-4xl xl:text-6xl">
             {project.title}
           </h2>
-          <p className="text-[10px] lg:text-base lg:text-left">
+          <p className="text-[10px] lg:text-std lg:text-left xl:text-xl">
             {project.description[0]}
           </p>
           <br />
-          <p className="hidden text-[10px] lg:text-base lg:flex lg:text-left">
+          <p className="hidden text-[10px] lg:text-std lg:flex lg:text-left xl:text-xl">
             {project.description[1]}
           </p>
         </div>
       ),
       flipCardBack: (
-        <div className="w-full lg:space-y-8">
-          <h2 className="text-2xl font-heading lg:text-4xl">Skills</h2>
+        <div className="w-full lg:space-y-6">
+          <h2 className="text-2xl font-heading lg:text-4xl xl:text-6xl">
+            Skills
+          </h2>
           <div className="flex lg:hidden">
             <Ticker messages={project.skills} />
           </div>
@@ -60,7 +62,7 @@ const Projects: React.FC<ProjectsProps> = ({ triggerAnimation }) => {
                 key={index}
                 className="bg-gradient-to-tr from-black to-gray-900 text-white rounded-lg text-center p-2"
               >
-                <p className="text-lg ">{skill}</p>
+                <p className="xl:text-3xl">{skill}</p>
               </div>
             ))}
           </div>
@@ -69,19 +71,17 @@ const Projects: React.FC<ProjectsProps> = ({ triggerAnimation }) => {
             <h2 className="text-2xl font-heading">Technologies</h2>
             <Ticker messages={project.tech} />
           </div>
-          <h2 className="text-2xl font-heading lg:text-4xl">Links</h2>
+          <h2 className="text-2xl font-heading lg:text-4xl xl:text-6xl">
+            Links
+          </h2>
           <div className="flex items-center justify-center space-x-2">
             {project.links.slice(0, 2).map((link, index) => (
-              <SocialIcon
-                key={index}
-                url={link}
-                style={{ height: 25, width: 25 }}
-              />
+              <SocialIcon key={index} url={link} className="social-icon" />
             ))}
             {project.links.length > 2 && (
               <Link href={project.links[2]} target="_blank">
-                <div className="flex items-center justify-center bg-gray-700 text-white w-7 h-7 rounded-full">
-                  <TvIcon className="h-5 w-5" />
+                <div className="flex items-center justify-center bg-gray-700 text-white w-7 h-7 rounded-full 2xl:w-14 2xl:h-14">
+                  <TvIcon className="h-5 w-5 2xl:w-8 2xl:h-8" />
                 </div>
               </Link>
             )}
@@ -112,13 +112,12 @@ const Projects: React.FC<ProjectsProps> = ({ triggerAnimation }) => {
       transition={{ delay: 4, duration: 1 }}
       className="absolute top-0 left-0 w-full h-full flex-col flex items-center justify-center"
     >
-      <h1 className="text-white text-6xl font-heading lg:text-8xl">Projects</h1>
+      <h1 className=" text-6xl font-heading lg:text-8xl lg:text-black bg-white border-2 border-b-4 border-r-4 border-black rounded-lg mt-2 p-1 font-bold px-4">
+        PROJECTS
+      </h1>
 
       <div className="h-full w-screen mt-3 relative lg:overflow-x-hidden lg:h-screen">
-        <div
-          className="h-[400px] w-[150px] absolute top-1/3 transform -translate-y-1/3 left-0 z-10 lg:w-4/5 lg:h-3/4 lg:ml-[-27%]"
-          //   style={{ marginLeft: "-27%" }}
-        >
+        <div className="h-[400px] w-[150px] absolute top-1/3 transform -translate-y-1/3 left-0 z-10 lg:w-4/5 lg:h-3/4 lg:ml-[-27%]">
           <RiveComponentPlayback />
         </div>
         <AnimatePresence mode="wait">
