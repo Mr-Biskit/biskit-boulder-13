@@ -4,11 +4,17 @@ import React, { Suspense, useState, useEffect, useRef } from "react";
 import Load from "@/components/Load";
 import AboutMe from "@/components/AboutMe";
 import Projects from "@/components/Projects";
+import InfoModal from "@/components/UI/InfoModal";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
+import { motion, AnimatePresence } from "framer-motion";
+import useModal from "@/hooks/useModal";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 const Home = () => {
+  // Modal
+  const { modalOpen, open, close } = useModal();
+
   // Loading
   const [showSpline, setShowSpline] = useState(false);
 
@@ -88,10 +94,18 @@ const Home = () => {
             <Projects triggerAnimation={triggerProjectSection} />
           )}
           {!showAboutMe && !showProjects && !showContact && (
-            <button className="p-2 bg-white absolute bottom-0 left-0 rounded-md">
+            <motion.button
+              // whileHover={{ scale: 1.1 }}
+              // whileTap={{ scale: 0.9 }}
+              onClick={() => (modalOpen ? close() : open())}
+              className="p-2 bg-white absolute bottom-3 left-3 rounded-md"
+            >
               <InformationCircleIcon className="text-green h-8 w-8 lg:h-12 lg:w-12" />
-            </button>
+            </motion.button>
           )}
+          <AnimatePresence initial={false} mode="wait">
+            {modalOpen && <InfoModal handleClose={close} content="Yo" />}
+          </AnimatePresence>
         </>
       ) : (
         <Load />

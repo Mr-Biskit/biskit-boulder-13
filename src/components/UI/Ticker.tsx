@@ -9,7 +9,7 @@ const Ticker = ({ messages }: TickerProps) => {
     <div className="ticker">
       <div className="ticker__items">
         {messages.map((message, index) => (
-          <span key={index} className="ticker__item">
+          <span key={index} className="ticker__item font-std">
             {message}
           </span>
         ))}

@@ -20,18 +20,6 @@
   }
 }
 
-.social-icon {
-  height: 25px;
-  width: 25px;
-}
-
-@media screen and (min-width: 1280px) {
-  .social-icon {
-    height: 35px;
-    width: 35px;
-  }
-}
-
 .bouncing-loader {
   display: flex;
   justify-content: center;
@@ -129,16 +117,6 @@
   z-index: 1;
 }
 
-@support (initial-letter: 2;) {
-  .better {
-    initial-letter: 2;
-  }
-}
-
-.better::first-letter {
-  initial-letter: 2;
-}
-
 @keyframes ticker {
   0% {
     transform: translateX(100%);
@@ -168,63 +146,26 @@
   margin-right: 50px;
 }
 
-.pushable {
-  position: relative;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-@media (max-width: 380px) {
-  .shadow .edge .front .pushable {
-    transform: scale(0.2);
-  }
-}
-
-.shadow {
+.backdrop {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
-  border-radius: 12px;
-  background: hsl(0deg 0% 0% / 0.25);
-  transform: translateY(2px);
-}
-.edge {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: hsl(340deg 100% 32%);
-}
-.front {
-  display: block;
-  position: relative;
-  padding: 12px 42px;
-  border-radius: 12px;
-  font-size: 1.25rem;
-  color: white;
-  background: hsl(345deg 100% 47%);
-  transform: translateY(-4px);
+  background: #000000e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
 }
 
-.pushable:hover .front {
-  transform: translateY(-6px);
-}
-.pushable:hover .shadow {
-  transform: translateY(4px);
-}
-.pushable:active .front {
-  transform: translateY(-2px);
-}
-.pushable:active .shadow {
-  transform: translateY(1px);
-}
-
-.pushable:focus:not(:focus-visible) {
-  outline: none;
+.modal {
+  width: clamp(50%, 700px, 90%);
+  height: min(80%, 600px);
+  margin: auto;
+  padding: 0 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

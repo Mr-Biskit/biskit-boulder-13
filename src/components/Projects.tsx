@@ -39,17 +39,17 @@ const Projects: React.FC<ProjectsProps> = ({ triggerAnimation }) => {
           <h2 className="text-2xl font-heading text-right lg:text-left lg:text-4xl xl:text-6xl">
             {project.title}
           </h2>
-          <p className="text-[10px] lg:text-std lg:text-left xl:text-xl">
+          <p className="text-[10px] lg:text-std lg:text-left xl:text-xl font-std">
             {project.description[0]}
           </p>
           <br />
-          <p className="hidden text-[10px] lg:text-std lg:flex lg:text-left xl:text-xl">
+          <p className="hidden text-[10px] lg:text-std lg:flex lg:text-left xl:text-xl font-std">
             {project.description[1]}
           </p>
         </div>
       ),
       flipCardBack: (
-        <div className="w-full lg:space-y-6">
+        <div className="w-full lg:space-y-5">
           <h2 className="text-2xl font-heading lg:text-4xl xl:text-6xl">
             Skills
           </h2>
@@ -62,7 +62,7 @@ const Projects: React.FC<ProjectsProps> = ({ triggerAnimation }) => {
                 key={index}
                 className="bg-gradient-to-tr from-black to-gray-900 text-white rounded-lg text-center p-2"
               >
-                <p className="xl:text-3xl">{skill}</p>
+                <p className="xl:text-3xl font-std">{skill}</p>
               </div>
             ))}
           </div>
@@ -74,10 +74,32 @@ const Projects: React.FC<ProjectsProps> = ({ triggerAnimation }) => {
           <h2 className="text-2xl font-heading lg:text-4xl xl:text-6xl">
             Links
           </h2>
-          <div className="flex items-center justify-center space-x-2">
-            {project.links.slice(0, 2).map((link, index) => (
-              <SocialIcon key={index} url={link} className="social-icon" />
-            ))}
+          <div className="flex items-center justify-center space-x-4 mt-2 2xl:space-x-6">
+            <div className="flex 2xl:hidden space-x-4">
+              {project.links.slice(0, 2).map((link, index) => (
+                <SocialIcon
+                  key={index}
+                  url={link}
+                  style={{
+                    height: 25,
+                    width: 25,
+                  }}
+                />
+              ))}
+            </div>
+            <div className="2xl:flex hidden space-x-6">
+              {project.links.slice(0, 2).map((link, index) => (
+                <SocialIcon
+                  key={index}
+                  url={link}
+                  style={{
+                    height: 65,
+                    width: 65,
+                  }}
+                />
+              ))}
+            </div>
+
             {project.links.length > 2 && (
               <Link href={project.links[2]} target="_blank">
                 <div className="flex items-center justify-center bg-gray-700 text-white w-7 h-7 rounded-full 2xl:w-14 2xl:h-14">
