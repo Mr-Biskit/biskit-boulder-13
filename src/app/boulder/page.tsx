@@ -4,6 +4,7 @@ import React, { Suspense, useState, useEffect, useRef } from "react";
 import Load from "@/components/Load";
 import AboutMe from "@/components/AboutMe";
 import Projects from "@/components/Projects";
+import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
@@ -33,7 +34,7 @@ const Home = () => {
     // After 15 seconds, set showSpline to true
     const timer = setTimeout(() => {
       setShowSpline(true);
-    }, 1000);
+    }, 8000);
 
     // Clear the timeout if the component is unmounted before the 15 seconds are up
     return () => clearTimeout(timer);
@@ -77,13 +78,19 @@ const Home = () => {
       {showSpline ? (
         <>
           <Spline
-            scene="https://prod.spline.design/AaQ5hKQz80KFqBBA/scene.splinecode"
+            // "https://prod.spline.design/AaQ5hKQz80KFqBBA/scene.splinecode"
+            scene="https://draft.spline.design/qpv8K6SHV2X5CzWz/scene.splinecode"
             onMouseDown={handleMouseDown}
             onLoad={onLoad}
           />
           {showAboutMe && <AboutMe triggerAnimation={triggerAboutSection} />}
           {showProjects && (
             <Projects triggerAnimation={triggerProjectSection} />
+          )}
+          {!showAboutMe && !showProjects && !showContact && (
+            <button className="p-2 bg-white absolute bottom-0 left-0 rounded-md">
+              <InformationCircleIcon className="text-green h-8 w-8 lg:h-12 lg:w-12" />
+            </button>
           )}
         </>
       ) : (
