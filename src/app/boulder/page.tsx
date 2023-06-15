@@ -39,24 +39,21 @@ const Home = () => {
   useEffect(() => {
     if (showAboutMe) {
       setTimeout(() => {
-        // Show the "About Me" component after a 1-second delay
         setShowAboutMe(true);
       }, 1000);
     }
   }, [showAboutMe]);
 
   useEffect(() => {
-    // After 15 seconds, set showSpline to true
     const timer = setTimeout(() => {
       setShowSpline(true);
     }, 8000);
 
     return () => clearTimeout(timer);
-  }, []); // Empty dependency array to run this effect only once
+  }, []);
 
   const handleMouseDown = (e: { target: { name: string } }) => {
     if (e.target.name === "mystory") {
-      // Set the state to trigger the useEffect hook
       setShowAboutMe(true);
     } else if (e.target.name === "projects") {
       setShowProjects(true);
@@ -67,7 +64,6 @@ const Home = () => {
 
   function onLoad(splineApp: any) {
     const obj = splineApp.findObjectByName("Camera");
-    // save the object in a ref for later use
     cameraRef.current = obj;
     spline.current = splineApp;
   }
@@ -92,7 +88,6 @@ const Home = () => {
       {showSpline ? (
         <>
           <Spline
-            // "https://prod.spline.design/AaQ5hKQz80KFqBBA/scene.splinecode"
             scene="https://draft.spline.design/qpv8K6SHV2X5CzWz/scene.splinecode"
             onMouseDown={handleMouseDown}
             onLoad={onLoad}
