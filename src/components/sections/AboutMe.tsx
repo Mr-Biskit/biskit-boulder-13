@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useRive } from "@rive-app/react-canvas";
-import { mystory } from "../../data";
-import BackButton from "./UI/BackButton";
-import FlipCard from "./UI/FlipCard";
+import { mystory } from "../../../data";
+import BackButton from "../UI/BackButton";
+import FlipCard from "../UI/FlipCard";
 import Image from "next/image";
 
 type AboutMeProps = {

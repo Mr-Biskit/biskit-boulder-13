@@ -5,11 +5,11 @@ import {
   useStateMachineInput,
   StateMachineInput,
 } from "@rive-app/react-canvas";
-import BackButton from "./UI/BackButton";
-import Project from "./UI/Project";
+import BackButton from "../UI/BackButton";
+import Project from "../UI/Project";
 import { useState } from "react";
-import { projects } from "../../data";
-import Ticker from "./UI/Ticker";
+import { projects } from "../../../data";
+import Ticker from "../UI/Ticker";
 import { SocialIcon } from "react-social-icons";
 import {
   TvIcon,

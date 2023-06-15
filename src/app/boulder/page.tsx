@@ -1,9 +1,10 @@
 "use client";
 import React, { Suspense, useState, useEffect, useRef } from "react";
 
-import Load from "@/components/Load";
-import AboutMe from "@/components/AboutMe";
-import Projects from "@/components/Projects";
+import Load from "@/components/sections/Load";
+import AboutMe from "@/components/sections/AboutMe";
+import Projects from "@/components/sections/Projects";
+import Contact from "@/components/sections/Contact";
 import InfoModal from "@/components/UI/InfoModal";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,6 +29,14 @@ const Home = () => {
   const spline = useRef<any>();
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      open();
+    }, 8000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     if (showAboutMe) {
       setTimeout(() => {
         // Show the "About Me" component after a 1-second delay
@@ -42,7 +51,6 @@ const Home = () => {
       setShowSpline(true);
     }, 8000);
 
-    // Clear the timeout if the component is unmounted before the 15 seconds are up
     return () => clearTimeout(timer);
   }, []); // Empty dependency array to run this effect only once
 
@@ -93,6 +101,7 @@ const Home = () => {
           {showProjects && (
             <Projects triggerAnimation={triggerProjectSection} />
           )}
+          {showContact && <Contact triggerAnimation={triggerContactSection} />}
           {!showAboutMe && !showProjects && !showContact && (
             <motion.button
               // whileHover={{ scale: 1.1 }}
@@ -104,7 +113,7 @@ const Home = () => {
             </motion.button>
           )}
           <AnimatePresence initial={false} mode="wait">
-            {modalOpen && <InfoModal handleClose={close} content="Yo" />}
+            {modalOpen && <InfoModal handleClose={close} />}
           </AnimatePresence>
         </>
       ) : (

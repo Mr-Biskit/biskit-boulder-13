@@ -79,3 +79,22 @@ export const projects = [
     imagePath: "/images/didcomm.png",
   },
 ];
+
+export const socialLinks = [
+  "https://github.com/Mr-Biskit",
+  "https://twitter.com/mr__biskit",
+  "https://www.linkedin.com/in/gabriel-vince-017059214/",
+  "https://discordapp.com/users/MrBiskit#0483",
+];
+
+export const modalInfo = {
+  title: "WELCOME TO BISKIT BOULDER",
+  description: [
+    "Enjoy exploring around the ancient boulder of Biskit. You can zoom into the boulder by scrolling, and rotate it by dragging.",
+    "Click on the the floating clouds to navigate to the relevant sections",
+    "Click on the Back button to return to the boulder",
+    "The Boulder is still a WIP and everyday I am adding new features, animations and goodies. So keep checking back for more!",
+    "The Comic Strip of the history of Biskit Boulder, is coming soon!",
+  ],
+  cloudPath: "/images/Cloud.png",
+};
