@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Mr Biskit Portfolio",
@@ -15,6 +16,7 @@ export default function RootLayout({
       <body>
         <div className="bg-gradient-to-tr from-black to-gray-900">
           {children}
+          <Analytics />
         </div>
       </body>
     </html>
