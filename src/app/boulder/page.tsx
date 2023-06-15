@@ -31,18 +31,10 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       open();
-    }, 8000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    if (showAboutMe) {
-      setTimeout(() => {
-        setShowAboutMe(true);
-      }, 1000);
-    }
-  }, [showAboutMe]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -99,10 +91,10 @@ const Home = () => {
           {showContact && <Contact triggerAnimation={triggerContactSection} />}
           {!showAboutMe && !showProjects && !showContact && (
             <motion.button
-              // whileHover={{ scale: 1.1 }}
-              // whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               onClick={() => (modalOpen ? close() : open())}
-              className="p-2 bg-white absolute bottom-3 left-3 rounded-md"
+              className="p-2 bg-white absolute bottom-3 left-3 rounded-md opacity-30 hover:opacity-100"
             >
               <InformationCircleIcon className="text-green h-8 w-8 lg:h-12 lg:w-12" />
             </motion.button>

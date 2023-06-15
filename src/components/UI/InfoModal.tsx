@@ -40,14 +40,14 @@ const contentDiv = (
       {modalInfo.title}
     </h1>
     <br />
-    <p className="text-xs font-base text-center font-std 2xl:text-lg">
+    <p className="text-xs font-base text-center 2xl:text-lg">
       {modalInfo.description[0]}
     </p>
     <br />
     <p className="text-xs font-base text-center 2xl:text-lg">
       {modalInfo.description[1]}
     </p>
-    <div className="relative w-1/2 h-1/5 lg:w-1/3 xl:w-1/4">
+    <div className="relative w-1/2 h-1/5 lg:w-1/3 2xl:w-1/5 ">
       <Image src={modalInfo.cloudPath} fill alt="Cloud" />
     </div>
     <p className="text-xs font-base text-center 2xl:text-lg">

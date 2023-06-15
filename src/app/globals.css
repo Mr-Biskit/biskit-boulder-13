@@ -168,6 +168,54 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 5px #b0e0e6, 0 0 10px #b0e0e6, 0 0 20px #b0e0e6,
-    0 0 30px #b0e0e6;
+  box-shadow: 0 0 2px #b0e0e6, 0 0 5px #b0e0e6, 0 0 10px #b0e0e6,
+    0 0 20px #b0e0e6;
+}
+
+.input-area {
+  width: clamp(90%, 100%, 100%);
+  height: clamp(40px, 2.5em, 60px);
+  background: white;
+  border-radius: 5px;
+  border: 2px solid black;
+  border-bottom-width: 8px;
+  border-right-width: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Tailwind's shadow-lg */
+  border-radius: 0.5rem; /* Tailwind's rounded-lg */
+}
+
+.input-area:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.text-area {
+  width: clamp(90%, 100%, 100%);
+  height: clamp(100px, 5em, 200px);
+  background: white;
+  border-radius: 5px;
+  border: 2px solid black;
+  border-bottom-width: 8px;
+  border-right-width: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Tailwind's shadow-lg */
+  border-radius: 0.5rem; /* Tailwind's rounded-lg */
+}
+
+.text-area:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #719ece;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #719ece;
+}
+
+@media screen and (min-width: 1280px) {
+  .text-area {
+    height: min(220px, 30em);
+  }
 }

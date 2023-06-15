@@ -17,6 +17,7 @@ import {
   ChevronLeftIcon,
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import IconButton from "../UI/IconButton";
 
 type ProjectsProps = {
   triggerAnimation: () => void;
@@ -75,38 +76,21 @@ const Projects: React.FC<ProjectsProps> = ({ triggerAnimation }) => {
             Links
           </h2>
           <div className="flex items-center justify-center space-x-4 mt-2 2xl:space-x-6">
-            <div className="flex 2xl:hidden space-x-4">
-              {project.links.slice(0, 2).map((link, index) => (
-                <SocialIcon
-                  key={index}
-                  url={link}
-                  style={{
-                    height: 25,
-                    width: 25,
-                  }}
-                />
-              ))}
+            <div className="flex space-x-4 2xl:space-x-6">
+              {project.links.map((link, index) => {
+                let iconType = "";
+                if (link.includes("github")) {
+                  iconType = "github";
+                } else if (link.includes("vercel")) {
+                  iconType = "website";
+                } else if (link.includes("vimeo")) {
+                  iconType = "vimeo";
+                }
+                return (
+                  <IconButton key={index} iconType={iconType} link={link} />
+                );
+              })}
             </div>
-            <div className="2xl:flex hidden space-x-6">
-              {project.links.slice(0, 2).map((link, index) => (
-                <SocialIcon
-                  key={index}
-                  url={link}
-                  style={{
-                    height: 65,
-                    width: 65,
-                  }}
-                />
-              ))}
-            </div>
-
-            {project.links.length > 2 && (
-              <Link href={project.links[2]} target="_blank">
-                <div className="flex items-center justify-center bg-gray-700 text-white w-7 h-7 rounded-full 2xl:w-14 2xl:h-14">
-                  <TvIcon className="h-5 w-5 2xl:w-8 2xl:h-8" />
-                </div>
-              </Link>
-            )}
           </div>
         </div>
       ),
