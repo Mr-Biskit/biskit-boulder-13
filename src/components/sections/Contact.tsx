@@ -29,7 +29,7 @@ const Contact: FC<ContactProps> = ({ triggerAnimation }) => {
       <div className="flex flex-col items-center justify-center space-y-4 mt-4 lg:flex-row w-full h-full lg:p-10 lg:space-x-8 p-4">
         <div className="flex flex-col bg-white border-2 border-b-4 border-r-4 border-black lg:w-1/2 h-1/2 lg:h-full lg:p-6 items-center justify-center">
           <h2 className="text-2xl font-heading lg:text-4xl xl:text-6xl font-bold text-black tracking-widest text-left">
-            Let's Ignite Innovation, Together!
+            Let&aposs Ignite Innovation, Together!
           </h2>
           <h3 className="text-std lg:text-lg xl:text-3xl font-bold text-gray-700 mt-6 text-left">
             I am currently open to opportunities in pioneering, innovative
