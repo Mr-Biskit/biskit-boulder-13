@@ -110,6 +110,34 @@ export const projects = [
     ],
     imagePath: "/images/Beer.png",
   },
+  {
+    title: "Block Explorer and NFT Server",
+    description: [
+      "The Ethereum Block Explorer and NFT Price Tracker are two significant aspects of this project. The Ethereum Block Explorer is a comprehensive tool built with technologies like Next.js, React, Figma, and Tailwind CSS, that provides detailed information about Ethereum's network transactions, blocks, contracts, and specific addresses. It features real-time updates on price feeds and gas prices. It leverages the Alchemy API for Ethereum network data and the CoinGecko API for real-time Ether, gas, and market cap prices.",
+      "The NFT Price Tracker, on the other hand, tracks Transfer events across various mainstream NFT marketplaces. It works by connecting to a web socket of a specific NFT address and uses an Alchemy API and an Etherscan API key for operations. The future plan is to integrate the NFT Price Tracker into the Ethereum Block Explorer to provide users with real-time tracking of NFT price changes. This will give users a comprehensive view of the Ethereum ecosystem and its NFT marketplaces.",
+    ],
+    skills: [
+      "EVM and Ethereum State Trie Knowledge",
+      "WebSocket Integration",
+      "NFT Event Tracking",
+      "API Integration and Usage",
+      "Full Stack Web Development",
+      "JSON-RPC Implementation",
+    ],
+    tech: [
+      "Javascript",
+      "React",
+      "Ether.js",
+      "WebSockets",
+      "EVM (Ethereum Virtual Machine)",
+      "Contract ABI",
+    ],
+    links: [
+      "https://github.com/Mr-Biskit/Block-Explorer",
+      "https://github.com/Mr-Biskit/nftPriceTracker",
+    ],
+    imagePath: "/images/BlockExplorer.png",
+  },
 ];
 
 export const socialLinks = [
