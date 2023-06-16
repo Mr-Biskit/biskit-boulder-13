@@ -133,7 +133,8 @@ const Contact: FC<ContactProps> = ({ triggerAnimation }) => {
               type="submit"
               disabled={isSubmitting}
             >
-              Submit
+              {isSubmitted ? "Sent" : "Submit"}
+              {isSubmitting && <span className="animate-pulse">{"..."}</span>}
             </button>
           </div>
         </form>
